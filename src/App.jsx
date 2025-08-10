@@ -79,6 +79,7 @@ export default function App() {
 </div>
 
 
+
       {/* 検索から拾った下書きを確認 → 追加 */}
       {(draft.title || draft.author) && (
         <div className="mb-4 p-3 rounded-xl border bg-white">
@@ -130,10 +131,11 @@ export default function App() {
         </div>
       ))}
 
-      <BookSearch
+<BookSearch
         open={searchOpen}
-        onClose={()=>setSearchOpen(false)}
+        onClose={() => setSearchOpen(false)}
         onPick={onPickFromSearch}
       />
     </div>
   );
+}

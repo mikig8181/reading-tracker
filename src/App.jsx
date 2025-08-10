@@ -69,18 +69,15 @@ export default function App() {
       <h1 className="text-2xl font-bold mb-3">📚 読書管理</h1>
 
       <div className="flex flex-wrap gap-2 mb-4">
-        <button onClick={() => setFilter("all")} className="border rounded px-3 py-1.5">すべて</button>
-        <button onClick={() => setFilter("active")} className="border rounded px-3 py-1.5">読書中</button>
-        <button onClick={() => setFilter("done")} className="border rounded px-3 py-1.5">読了</button>
-        <button onClick={addBook} className="rounded bg-neutral-900 text-white px-3 py-1.5">＋本追加（手動）</button>
-        <button
-  onClick={() => { setSearchOpen(true); alert('open'); }}
-  className="rounded border px-3 py-1.5"
->
-  🔎 本を検索して追加
-</button>
-🔎 本を検索して追加</button>
-      </div>
+  <button onClick={() => setFilter("all")} className="border rounded px-3 py-1.5">すべて</button>
+  <button onClick={() => setFilter("active")} className="border rounded px-3 py-1.5">読書中</button>
+  <button onClick={() => setFilter("done")} className="border rounded px-3 py-1.5">読了</button>
+  <button onClick={addBook} className="rounded bg-neutral-900 text-white px-3 py-1.5">＋本追加（手動）</button>
+  <button onClick={() => setSearchOpen(true)} className="rounded border px-3 py-1.5">
+    🔎 本を検索して追加
+  </button>
+</div>
+
 
       {/* 検索から拾った下書きを確認 → 追加 */}
       {(draft.title || draft.author) && (
@@ -140,4 +137,3 @@ export default function App() {
       />
     </div>
   );
-}
